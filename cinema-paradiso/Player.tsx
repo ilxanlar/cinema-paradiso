@@ -57,7 +57,7 @@ function Player<TMedia extends HTMLMediaElement>(props: PlayerProps) {
   }, [unorderedSources])
 
   const player = useCreatePlayer<TMedia>({
-    autoPlay: true,
+    autoPlay: !!rest.autoPlay,
     defaultCurrentTime,
     defaultPlaybackRate,
     // fullscreenRef,
