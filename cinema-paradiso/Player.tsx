@@ -60,7 +60,7 @@ function Player<TMedia extends HTMLMediaElement>(props: PlayerProps) {
     autoPlay: !!rest.autoPlay,
     defaultCurrentTime,
     defaultPlaybackRate,
-    // fullscreenRef,
+    fullscreenRef,
     onFullscreenChange,
     sources,
     src,
