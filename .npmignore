@@ -1,0 +1,10 @@
+node_modules/
+public/
+src/
+
+.eslintrc.cjs
+.gitignore
+index.html
+postcss.config.js
+tailwind.config.js
+vite.config.ts
