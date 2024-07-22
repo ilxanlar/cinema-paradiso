@@ -1,6 +1,7 @@
-import { ComponentPropsWithoutRef, memo, RefObject, useMemo, useRef } from 'react'
+import { ComponentPropsWithoutRef, memo, ReactNode, RefObject, useMemo, useRef } from 'react'
 import useCreatePlayer from './useCreatePlayer'
 import Context from './context'
+import { PlayerType } from './types'
 
 type Caption = {
   default?: boolean
@@ -15,8 +16,9 @@ type Source = {
   src: string
 }
 
-export type PlayerProps = ComponentPropsWithoutRef<'video'> & {
+export type PlayerProps = Omit<ComponentPropsWithoutRef<'video'>, 'children'> & {
   captions?: Caption[]
+  children?: ReactNode | ((player: PlayerType) => ReactNode)
   defaultCurrentTime?: number
   defaultPlaybackRate?: number
   fullscreenRef?: RefObject<HTMLElement>
@@ -118,7 +120,7 @@ function Player<TMedia extends HTMLMediaElement>(props: PlayerProps) {
               )}
             </video>
 
-            {children}
+            {typeof children === 'function' ? children(player) : children}
           </div>
         </div>
       </>
