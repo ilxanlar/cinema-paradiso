@@ -30,7 +30,6 @@ type StylesType = {
 export default function useSeekerStyles(params: ParamsType): StylesType {
   const {
     isHovered,
-    isPreviewVisible,
     seekerBoxColor,
     seekerBufferedColor,
     seekerDotHeight,
@@ -134,7 +133,6 @@ export default function useSeekerStyles(params: ParamsType): StylesType {
   }, [
     isGhostTimeVisible,
     isHovered,
-    isPreviewVisible,
     seekerBoxColor,
     seekerBufferedColor,
     seekerDotHeight,
