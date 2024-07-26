@@ -1,9 +1,9 @@
 {
   "name": "cinema-paradiso",
   "private": false,
-  "version": "0.0.3",
+  "version": "0.0.4",
   "type": "module",
-  "main": "cinema-paradiso/main.js",
+  "main": "cinema-paradiso/cinema-paradiso.js",
   "types": "cinema-paradiso/main.d.ts",
   "files": [
     "cinema-paradiso"
