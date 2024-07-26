@@ -12,4 +12,4 @@ export { default as usePlayer } from './usePlayer'
 // Types
 export type { PlayerProps } from './Player'
 export type { SeekerProps } from './Seeker'
-export * from './types'
+export type { PlayerType } from './types'
